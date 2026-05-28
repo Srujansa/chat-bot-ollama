@@ -1,6 +1,7 @@
 READ THIS TO UNDERSTAND RAW  : 
 https://chatgpt.com/share/6a168d70-a25c-8321-9244-16402d447dd4
 IN LANGCHAIN TRANSITION : https://chatgpt.com/share/6a1699e5-0544-8320-8648-1b9e1a89001b
+take-this github to learn langchain : https://github.com/krishnaik06/Langchain-V1-Crash-Course/blob/main
 full agentic workflow ofopeai chatbot  :  
 import os
 from dotenv import load_dotenv
