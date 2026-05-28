@@ -340,3 +340,15 @@ and complete ML project in 10 days.
 response = structured_llm.invoke(prompt)
 
 print(response)
+
+
+| Concept                 | Meaning                   |
+| ----------------------- | ------------------------- |
+| Middleware              | Logic layer around LLM    |
+| SummarizationMiddleware | Compress old history      |
+| trigger                 | When summarization starts |
+| keep                    | Recent messages preserved |
+| checkpointer            | Stores conversation state |
+| thread_id               | Unique conversation ID    |
+| ToolMessage             | Result from tool          |
+
