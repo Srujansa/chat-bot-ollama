@@ -310,3 +310,33 @@ GOOGLE_API_KEY=your_google_key
 
 GROQ_API_KEY=your_groq_key
 """
+giving structured response so that other ai database can read 
+
+
+from pydantic import BaseModel, Field
+from langchain_ollama import ChatOllama
+
+# task schema
+class TaskPlan(BaseModel):
+    tasks: list[str] = Field(description="Task list")
+    priority: str = Field(description="Overall priority")
+    deadline: str = Field(description="Completion deadline")
+
+# initialize model
+llm = ChatOllama(model="llama3")
+
+# structured planner model
+structured_llm = llm.with_structured_output(
+    TaskPlan
+)
+
+prompt = """
+I need to prepare for interviews,
+learn LangChain,
+and complete ML project in 10 days.
+"""
+
+# generate plan
+response = structured_llm.invoke(prompt)
+
+print(response)
